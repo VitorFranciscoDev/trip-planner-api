@@ -1,1 +1,5 @@
 package infrastructure
+
+func Init() {
+
+}
