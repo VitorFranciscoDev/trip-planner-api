@@ -2,16 +2,16 @@ package repositories
 
 import (
 	"context"
-	"database/sql"
 
 	"github.com/VitorFranciscoDev/trip-planner-api/domain/entities"
+	"github.com/jackc/pgx/v5/pgxpool"
 )
 
 type MySQLUserRepository struct {
-	db *sql.DB
+	db *pgxpool.Pool
 }
 
-func NewMySQLUserRepository(db *sql.DB) MySQLUserRepository {
+func NewMySQLUserRepository(db *pgxpool.Pool) MySQLUserRepository {
 	return MySQLUserRepository{db: db}
 }
 
