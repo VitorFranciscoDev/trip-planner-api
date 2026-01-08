@@ -10,4 +10,6 @@ type UserRepository interface {
 	Login(ctx context.Context, email string, password string) (*entities.User, error)
 	GetUserByEmail(ctx context.Context, email string) (*entities.User, error)
 	AddUser(ctx context.Context, user *entities.User) error
+	DeleteUser(ctx context.Context, id int) error
+	UpdateUser(ctx context.Context, user *entities.User) error
 }
